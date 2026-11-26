@@ -5,9 +5,10 @@ const correo = document.getElementById('tuCorreo');
 const asunto = document.getElementById('asunto');
 const mensaje = document.getElementById('tuMensaje');
 
-// reemplazando false por true en formulario.noValidate
+// true en formulario.noValidate
 // desactiva los mensajes automáticos del navegador
 // para mostrar nuestros propios mensajes.
+// en caso de mostrar los mensajes automáticos del navegador, se puede comentar la línea siguiente
 formulario.noValidate = true; 
 
 formulario.addEventListener('submit', function(evento) {
