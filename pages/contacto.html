@@ -47,33 +47,60 @@
 
         <!-- ==================== FORMULARIO DE CONTACTO ==================== -->
         <section class="form-details">
-            <form action="https://formspree.io/f/TUFORMULARIO" method="POST" id="formularioContacto">
-                <span>DEJA UN MENSAJE</span>
-                <h2>Queremos saber de ti</h2>
+         
+            <form action="https://formspree.io/f/TUFORMULARIO"
+      method="POST"
+      id="formularioContacto">
 
-                <div class="campo-control">
-                    <input type="text" id="tuNombre" name="nombre" placeholder="Tu Nombre">
-                    <div class="texto-error"></div>
-                </div>
+    <span>DEJA UN MENSAJE</span>
+    <h2>Queremos saber de vos</h2>
 
-                <div class="campo-control">
-                    <input type="text" id="tuCorreo" name="correo" placeholder="Correo electrónico">
-                    <div class="texto-error"></div>
-                </div>
+    <div class="campo-control">
+        <input type="text"
+               id="tuNombre"
+               name="nombre"
+               placeholder="Tu nombre"
+               minlength="3"
+               maxlength="60"
+               required>
+        <div class="texto-error"></div>
+    </div>
 
-                <div class="campo-control">
-                    <input type="text" id="asunto" name="asunto" placeholder="Asunto">
-                    <div class="texto-error"></div>
-                </div>
+    <div class="campo-control">
+        <input type="email"
+               id="tuCorreo"
+               name="email"
+               placeholder="Ej.: usuario@gmail.com"
+               required>
+        <div class="texto-error"></div>
+    </div>
 
-                <div class="campo-control">
-                    <textarea id="tuMensaje" name="mensaje" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
-                    <div class="texto-error"></div>
-                </div>
+    <div class="campo-control">
+        <input type="text"
+               id="asunto"
+               name="asunto"
+               placeholder="Asunto"
+               minlength="5"
+               maxlength="100"
+               required>
+        <div class="texto-error"></div>
+    </div>
 
-                <button type="submit">Enviar</button>
-            </form>
+    <div class="campo-control">
+        <textarea id="tuMensaje"
+                  name="mensaje"
+                  cols="30"
+                  rows="10"
+                  placeholder="Tu mensaje"
+                  minlength="10"
+                  maxlength="1000"
+                  required></textarea>
+        <div class="texto-error"></div>
+    </div>
 
+    <button type="submit">Enviar</button>
+
+</form>
             <div class="people">
                 <div>
                     <img src="../img/people/1.png" alt="Martín Gómez">
@@ -176,7 +203,9 @@
 
     <script src="../script/script.js"></script>
     <script src="../script/contactoValidacion.js"></script>
+    <!--
     <script src="../script/contactoStorage.js"></script>
+-->
 </body>
 
 </html>

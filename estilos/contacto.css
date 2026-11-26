@@ -49,6 +49,24 @@
     font-family: inherit;
     font-size: 14px;
 }
+/*
+mostrar mensaje de error debajo del campo con borde rojo y fondo claro
+*/
+.texto-error {
+    color: #d32f2f;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.form-details form .campo-error {
+    border: 1px solid #d32f2f;
+    background-color: #fff5f5;
+}
+
+.campo-control {
+    width: 100%;
+}
 
 /* Altura del área de mensaje */
 .form-details form textarea {
@@ -96,6 +114,25 @@
 /* Se muestra cuando el campo tiene la clase error */
 .campo-control.error .texto-error {
     display: block;
+}
+.campo-control {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.texto-error {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.form-details form .campo-error {
+    border: 2px solid red;
+    background-color: #fff5f5;
 }
 
 
