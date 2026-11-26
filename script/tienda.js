@@ -5,12 +5,23 @@ let productosGlobales = [];
 
 
 fetch(API_URL)
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al obtener los productos');
+        }
+
+        return response.json();
+    })
     .then(data => {
-        console.log(data)
         productosGlobales = data;
         dibujarProductos(productosGlobales);
     })
+    .catch(error => {
+        console.error(error);
+
+        document.querySelector('.productos-container').innerHTML =
+            '<p>No se pudieron cargar los productos. Intentá nuevamente.</p>';
+    });
 
 //  2 Generar el HTML de los productos y mostrarlos en la página
 
